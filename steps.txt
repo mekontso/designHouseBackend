@@ -1,0 +1,19 @@
+-create the project
+    composer create-project --prefer-dist designhouseBackend
+-Add ui and auth functions
+    composer require laravel/ui
+    php artisan ui vue --auth
+    npm install && npm install cross-env && npm run dev
+
+-Add jwt https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+    composer require tymon/jwt-auth
+    php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+    php artisan jwt:secret
+    Update the user model to implement jwt functions
+    Change the default auth guard in config/auth.php to api and change driver to jwt
+-Update user fields
+-Add geographic search laravel-mysql-spacial https://github.com/grimzy/laravel-mysql-spatial
+
+
+
+
